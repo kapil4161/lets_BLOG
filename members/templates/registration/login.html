@@ -1,0 +1,33 @@
+
+{% extends 'base.html' %}
+{% block title %} Login!! {% endblock %}
+
+{% block content %}
+
+<h1>LOGIN........</h1>
+<br>
+<br>
+<div class="form-group">
+<form method="POST">
+	
+	{% csrf_token %}
+	
+
+	<div class="form-group">
+		   <!-- <label for="exampleInputEmail1">Username</label>  -->
+		    <input type="text" class="form-control" name="username" placeholder="Username">
+ 	</div>
+	<div class="form-group">
+
+	    <!-- <label for="exampleInputPassword1">Password</label>  -->
+	    <input type="password" class="form-control" name="password" placeholder="Password">
+	 </div>
+
+	<!--	<small id="emailHelp" class="form-text text-muted">Not a User? Register Here</small>	-->
+	<br>
+	<button class="btn btn-secondary"> LOGIN</button>
+</div>
+
+Not Registered? SignUp <a href="{% url 'register' %}">Here</a>
+
+{% endblock %}
